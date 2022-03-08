@@ -1,0 +1,4 @@
+@value mainColor: rgb(38, 38, 73);
+@value mainColorHover: rgb(100, 91, 124);
+@value mainColorText: rgb(236, 236, 248);
+@value mainShadow: 0px 2px 5px 0px rgba(0,0,0,0.1);

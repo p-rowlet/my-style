@@ -1,5 +1,15 @@
+@value mainColor, mainColorText from '../../common/colors.css';
+
 .footer{
+    display: flex;
+    justify-content: center;
     width: 100%;
-    height: 3rem;
+    height: 8rem;
     padding : 1rem;
+    background-color : mainColor;
+    color : mainColorText;
+}
+
+.copyright{
+    width: 80vw;
 }
