@@ -31,6 +31,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+}
+
+.login button:hover{
+    background-color: rgb(226, 247, 255);
 }
 
 .login img{

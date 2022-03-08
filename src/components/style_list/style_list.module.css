@@ -1,0 +1,30 @@
+@value mainColor, mainColorHover, mainColorText, mainShadow from '../../common/colors.css';
+
+.section{
+    display: flex;
+    justify-content: center;
+}
+
+.list{
+    width: 65vw;
+    padding : 1rem;
+}
+
+.title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.add{
+    padding : 10px;
+    cursor: pointer;
+    border : 1px solid mainColor;
+    border-radius: 5px;
+    background-color : mainColor;
+    color :mainColorText;
+}
+
+.add:hover{
+    background-color : mainColorHover;
+}
