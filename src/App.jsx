@@ -13,7 +13,7 @@ function App() {
 				<Routes>
 					<Route path="/login" element={<Login />} />
 					<Route path="/list" element={<StyleList />} />
-					<Route path="/write" element={<WriteStyle />} />
+					<Route path="/post" element={<WriteStyle />} />
 				</Routes>
 			</BrowserRouter>
       <Footer />
