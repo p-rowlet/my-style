@@ -1,8 +1,26 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import StylePreview from "../style_preview/style_preview";
 import styles from "./style_list.module.css";
 
-const StyleList = (props) => {
+const StyleList = ({authService}) => {
+
+	const location = useLocation();
+	const locationState = location?.state;
+	const navigate = useNavigate();
+
+	const [userId, setUserId] = useState(locationState && locationState.id);
+
+	useEffect(()=>{
+        authService.onAuthChange(user =>{
+            if(user){
+                setUserId(user.uid);
+            }else{
+                navigate('/');
+            }
+        })
+    }, [userId, navigate, authService]);
+
 	return (
 		<section className={styles.section}>
 			<div className={styles.list}>

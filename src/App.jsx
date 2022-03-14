@@ -4,19 +4,27 @@ import StyleList from "./components/style_list/style_list";
 import WriteStyle from "./components/write_style/write_style";
 import Header from "./components/header/header";
 import Footer from "./components/footer/footer";
+import React, { useCallback } from "react";
 
-function App() {
+function App({ authService }) {
+	const onLogout = useCallback(() => {
+		authService.logout();
+	}, [authService]);
+
 	return (
 		<>
-      <Header />
+			<Header onLogout={onLogout} />
 			<BrowserRouter>
 				<Routes>
-					<Route path="/login" element={<Login />} />
-					<Route path="/list" element={<StyleList />} />
+					<Route
+						path="/"
+						element={<Login authService={authService} />}
+					/>
+					<Route path="/list" element={<StyleList authService={authService}/>} />
 					<Route path="/post" element={<WriteStyle />} />
 				</Routes>
 			</BrowserRouter>
-      <Footer />
+			<Footer />
 		</>
 	);
 }
