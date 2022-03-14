@@ -5,6 +5,7 @@ import WriteStyle from "./components/write_style/write_style";
 import Header from "./components/header/header";
 import Footer from "./components/footer/footer";
 import React, { useCallback } from "react";
+import NoMatch from "./components/nomatch/nomatch";
 
 function App({ authService }) {
 	const onLogout = useCallback(() => {
@@ -22,6 +23,7 @@ function App({ authService }) {
 					/>
 					<Route path="/list" element={<StyleList authService={authService}/>} />
 					<Route path="/post" element={<WriteStyle />} />
+					<Route path="*" element={<NoMatch />}/>
 				</Routes>
 			</BrowserRouter>
 			<Footer />
