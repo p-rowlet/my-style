@@ -1,6 +1,7 @@
 @value mainColor, mainColorHover, mainColorText, mainShadow from '../../common/colors.css';
 
 .section {
+	margin-top : 90px;
 	display: flex;
 	justify-content: center;
 }

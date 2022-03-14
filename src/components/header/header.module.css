@@ -1,32 +1,37 @@
 @value mainColor, mainColorHover, mainColorText, mainShadow from '../../common/colors.css';
 
-.header{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    padding : 1rem 3rem ;
-    box-shadow: mainShadow;
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(255, 255, 255, 0.6);
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	padding: 1rem 3rem;
+	box-shadow: mainShadow;
 }
 
-.logoimg{
-    width: 120px;
-}
-
-.logout{
-    padding : 10px;
+.logoimg {
+	width: 120px;
     cursor: pointer;
-    border : 1px solid mainColor;
-    border-radius: 5px;
-    background-color : mainColor;
-    color :mainColorText;
 }
 
-.logout:hover{
-    background-color : mainColorHover;
+.logout {
+	padding: 10px;
+	cursor: pointer;
+	border: 1px solid mainColor;
+	border-radius: 5px;
+	background-color: mainColor;
+	color: mainColorText;
 }
 
-.content{
-    width : 80vw;
-    display: flex;
-    justify-content: space-between;
+.logout:hover {
+	background-color: mainColorHover;
+}
+
+.content {
+	width: 80vw;
+	display: flex;
+	justify-content: space-between;
 }
